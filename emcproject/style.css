@@ -121,59 +121,82 @@ header nav {
 }
 
 .bootcamp__title{
+    background-color: #000;
+    color: #fff;
     padding-left: 20px;
 }
 
 .bootcamp__title p {
     font-family: 'Great Vibes', cursive;
-    font-size: 1.5rem;
+    font-size: 3.5rem;
     font-weight: 400;
-    color: #131022;
     line-height: 31.2px;
-    margin-bottom: 1.25rem;
     text-align: center;
     margin-top: 20px;
     margin-bottom: 0;
+    padding-top: 20px;
 }
 
 .bootcamp__title h1 {
     font-size: 3rem;
     font-weight: 800;
-    color: #131022;
     line-height: 62.4px;
     margin-bottom: 0;
 }
 
 .bootcamp__body{
-    
-    border: 20px solid #13dc4c;
     display: flex;
     flex-direction: column;
+    background-color: var(--primary);
+    border: 15px solid var(--primary);
     border-radius: 20px;
+}
+.bootcamp__body_inner{
+    padding: 10px;
     background-color: #fff;
+    border-radius: 20px;
 }
 
 .bootcamp__img{
     width: 100%;
-    padding: 10px;
-    border-radius: 20px;
+    border-radius: 16px 16px 0 0;
 }
 
 .bootcamp__button button{
     background: transparent;
     border: none;
     color: var(--secondray-color);
-    border: 1px solid var(--secondray-color);
     padding: 10px;
     border-radius: 4px;
     margin: auto;
-    width: 90vw;
-}
-.bootcamp__content h1{
-    font-family: 'Manrope', sans-serif;
-    font-size: 22px;
+    width: 100%;
+    border-radius: 0 0 16px 16px;
+    background-image: linear-gradient(360deg, #a0da9a 0%, #09d302 100%);
 }
 
+.bootcamp__content{
+    display: flex;
+    flex-direction: column;
+}
+.bootcamp__content h1{
+    font-weight: 900;
+    font-size: 21px;
+}
+.bootcamp__content__i{
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.bootcamp__content h2{
+    font-size: 40px;
+}
+.bootcamp__content h2 span{
+    color: var(--primary);
+}
+.bootcamp__content i{
+    color: #108a00;
+}
 .our__courses{
     padding-left: 20px;
 }
