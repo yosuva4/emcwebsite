@@ -10,6 +10,7 @@
 
 body {
   font-family: "Gabarito", sans-serif;
+  overflow-x: hidden;
 }
 
 :root {
@@ -27,6 +28,7 @@ header {
   padding: 20px;
   position: fixed;
   top: 0;
+  z-index: 999;
   width: 100%;
   box-shadow: rgba(84, 82, 82, 0.2) 0px 5px 12px;
 }
@@ -53,12 +55,15 @@ header nav {
 .header__register {
   display: none;
 }
-
+.bootcamp_animation{
+  display: none;
+}
 .hero__section {
   background-color: var(--secondray-color);
   color: var(--text-color);
   display: flex;
   flex-direction: column;
+  justify-content: center;
   padding: 24% 20px 32px 20px;
 }
 
@@ -66,6 +71,14 @@ header nav {
   font-family: "Manrope", sans-serif;
   font-size: 18px;
   line-height: 28px;
+}
+
+.hero__section__detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 15px;
 }
 
 .hero__section button {
@@ -86,15 +99,12 @@ header nav {
   transition: all 1s;
 }
 
-.hero__section img {
-  display: none;
-}
-
 .hero__social {
   padding: 10px;
   display: flex;
   flex-direction: column;
   gap: 10px;
+  margin-top: 20px;
 }
 
 .hero__social img {
@@ -102,11 +112,11 @@ header nav {
 }
 
 .hero__social .hero__social__detail {
-  background-color: var(--secondray-color);
+  background-color: #fff;
   padding: 10px;
   border-radius: 10px;
   gap: 20px;
-  color: var(--text-color);
+  color: var(--secondray-color);
   display: flex;
   align-items: center;
   box-shadow: 2px 2px 2px 2px rgba(144, 147, 140, 0.52);
@@ -128,6 +138,10 @@ header nav {
   font-weight: 900;
 }
 
+.hero__social__detail img {
+  width: 30px;
+}
+
 .bootcamp__title {
   background-color: #000;
   color: #fff;
@@ -136,7 +150,7 @@ header nav {
 
 .bootcamp__title p {
   font-family: "Great Vibes", cursive;
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   font-weight: 400;
   line-height: 31.2px;
   text-align: center;
@@ -146,10 +160,11 @@ header nav {
 }
 
 .bootcamp__title h1 {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 800;
   line-height: 62.4px;
   margin-bottom: 0;
+  text-align: center;
 }
 
 .bootcamp__body {
@@ -182,8 +197,14 @@ header nav {
   border-radius: 0 0 16px 16px;
   /* background-image: linear-gradient(360deg, #a0da9a 0%, #09d302 100%); */
   border: 2px solid var(--primary);
+  cursor: pointer;
 }
 
+.bootcamp__body_inner button:hover{
+  background-color: var(--primary);
+  transition: 2s;
+  color: #000;
+}
 .bootcamp__content {
   display: flex;
   flex-direction: column;
@@ -218,6 +239,13 @@ header nav {
   flex-direction: column;
   flex-wrap: wrap;
   padding: 20px;
+}
+
+.our__courses__content__split {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .our__courses__content {
@@ -279,18 +307,18 @@ footer p {
 @media (min-width: 426px) {
   .hero__section {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
     padding: 14% 20px 32px 20px;
-    ;
+    justify-content: flex-start;
+    flex-direction: row;
   }
+
 
   .hero__section__detail {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    text-align: left;
+    width: 90%;
     gap: 20px;
-    width: 55%;
   }
 
   .hero__section__detail button {
@@ -305,21 +333,26 @@ footer p {
   }
 
   .hero__social {
-    flex-direction: row;
+    margin-left: auto;
+    position: relative;
   }
 
   .hero__social__detail {
-    width: 34%;
-    flex-direction: row;
-    gap: 8px !important;
+    gap: 6px !important;
+    border-radius: 50px !important;
+    position: relative;
+    right: -55px;
+    width: 250px;
+    box-shadow: none !important;
   }
 
   .hero__social__detail img {
-    width: 50px;
+    width: 40px;
+    height: 40px;
   }
 
-  .hero__social__detail h1 {
-    font-size: 20px;
+  .hero__social__detail p {
+    font-size: 14px;
     display: flex;
     gap: 4px;
   }
@@ -340,13 +373,110 @@ footer p {
 }
 
 @media (min-width: 1024px) {
+
   .hero__section {
     padding: 10% 20px 32px 20px;
   }
-  .hero__section h1{
+
+  .hero__section h1 {
     font-size: 50px;
   }
-  .our__courses__content__split{
+
+  .our__courses__content__split {
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
   }
+
+  header nav {
+    display: flex;
+  }
+
+  header nav ul {
+    display: flex;
+    gap: 40px;
+    font-size: 20px;
+  }
+
+  header nav ul li {
+    list-style: none;
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(0.20turn, #0DBA4B, rgba(255, 255, 255, 0));
+    border-image-slice: 1;
+  }
+
+  header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .header__register {
+    display: flex;
+    gap: 20px;
+  }
+
+  .header__register button{
+    padding: 6px 18px;
+    background-color: var(--primary);
+    color: var(--secondray-color);
+    font-weight: 300;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  .header__socialmedia {
+    display: none;
+  }
+  .bootcamp__body{
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    border: 7px solid var(--primary);
+  }
+  .bootcamp__body_inner{
+    background-color: #000;
+  }
+  .bootcamp__body_inner button{
+    width: 30%;
+    margin: 20px;
+    margin-left: 20%;
+    color: #fff;
+  }
+  .bootcamp__img{
+    width: 60%;
+    margin-left: 10%;
+  }
+  .bootcamp_animation{
+    display: flex;
+  }
+  .bootcamp_animation img {
+    width: 300px;
+    height: 300px;
+  }
+
+
+  @keyframes bubble {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    50% {
+      transform: translateY(-50px);
+      opacity: 0.8;
+    }
+  
+    100% {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+
+  .bub{
+    animation: bubble 1.5s ease-in-out infinite;
+  }
+
+
 }
