@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700;800;900&family=Manrope:wght@200&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+
 * {
   padding: 0;
   margin: 0;
@@ -18,16 +19,16 @@ body {
 }
 
 header {
-    background-color: var(--secondray-color);
-    color: var(--text-color);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    box-shadow: rgba(84, 82, 82, 0.2) 0px 5px 12px;
+  background-color: var(--secondray-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: rgba(84, 82, 82, 0.2) 0px 5px 12px;
 }
 
 .header__socialmedia {
@@ -54,11 +55,11 @@ header nav {
 }
 
 .hero__section {
-    background-color: var(--secondray-color);
-    color: var(--text-color);
-    display: flex;
-    flex-direction: column;
-    padding: 14% 20px 32px 20px;
+  background-color: var(--secondray-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  padding: 24% 20px 32px 20px;
 }
 
 .hero__section p {
@@ -86,8 +87,8 @@ header nav {
 }
 
 .hero__section img {
-    display: none;
-  }
+  display: none;
+}
 
 .hero__social {
   padding: 10px;
@@ -158,6 +159,7 @@ header nav {
   border: 15px solid var(--primary);
   border-radius: 20px;
 }
+
 .bootcamp__body_inner {
   padding: 10px;
   background-color: #fff;
@@ -186,43 +188,91 @@ header nav {
   display: flex;
   flex-direction: column;
 }
+
 .bootcamp__content h1 {
   font-weight: 900;
   font-size: 21px;
 }
+
 .bootcamp__content__i {
   display: flex;
   gap: 10px;
   margin-top: 10px;
   font-weight: bold;
 }
+
 .bootcamp__content h2 {
   font-size: 40px;
 }
+
 .bootcamp__content h2 span {
   color: var(--primary);
 }
+
 .bootcamp__content i {
   color: #108a00;
 }
+
 .our__courses {
-  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 20px;
 }
 
 .our__courses__content {
-  padding-left: 20px;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.our__courses__boxs {
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+
+.our__courses__boxs iframe {
+  width: 100%;
+  object-fit: cover;
+}
+
+.our__courses__conent__detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   gap: 10px;
 }
 
-.our__courses__content__box {
-  width: 340px;
-  border: 2px solid var(--primary);
-  border-radius: 4px;
+.our__courses__conent__detail button {
+  border: 0px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 2s;
 }
-.our__courses__content__box img {
-  width: 335px;
+
+.our__courses__conent__detail button:hover {
+  background-color: var(--primary);
+  border: none;
+}
+
+footer {
+  background-color: var(--secondray-color);
+  color: var(--text-color);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+footer p {
+  font-size: 15px;
+  color: gray;
 }
 
 /* Media Query for Tablets */
@@ -231,6 +281,8 @@ header nav {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    padding: 14% 20px 32px 20px;
+    ;
   }
 
   .hero__section__detail {
@@ -265,9 +317,36 @@ header nav {
   .hero__social__detail img {
     width: 50px;
   }
+
   .hero__social__detail h1 {
     font-size: 20px;
     display: flex;
     gap: 4px;
+  }
+
+  .our__courses__content {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .our__courses__boxs iframe {
+    height: 300px;
+  }
+
+  footer {
+    flex-direction: row;
+  }
+
+}
+
+@media (min-width: 1024px) {
+  .hero__section {
+    padding: 10% 20px 32px 20px;
+  }
+  .hero__section h1{
+    font-size: 50px;
+  }
+  .our__courses__content__split{
+    width: 100%;
   }
 }
