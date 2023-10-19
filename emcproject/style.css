@@ -171,7 +171,8 @@ header nav {
     margin: auto;
     width: 100%;
     border-radius: 0 0 16px 16px;
-    background-image: linear-gradient(360deg, #a0da9a 0%, #09d302 100%);
+    /* background-image: linear-gradient(360deg, #a0da9a 0%, #09d302 100%); */
+    border: 2px solid var(--primary);
 }
 
 .bootcamp__content{
