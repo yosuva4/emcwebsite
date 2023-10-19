@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700;800;900&family=Manrope:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gabarito', sans-serif;
+}
+
+:root {
+    --primary: #05FF4C;
+    --secondray-color: #000;
+    --text-color: #fff;
+}
+
+header {
+    background-color: var(--secondray-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.header__socialmedia {
+    margin-right: 4%;
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+}
+
+.header__socialmedia i {
+    cursor: pointer;
+}
+
+.header__socialmedia i:hover {
+    color: var(--primary);
+}
+
+
+header nav {
+    display: none;
+}
+
+.header__register {
+    display: none;
+}
+
+.hero__section {
+    background-color: var(--secondray-color);
+    color: var(--text-color);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero__section p {
+    font-family: 'Manrope', sans-serif;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.hero__section button {
+    background: transparent;
+    border: none;
+    color: var(--text-color);
+    border: 1px solid var(--primary);
+    padding: 10px;
+    border-radius: 4px;
+    width: 50%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.hero__section button:hover {
+    background-color: var(--primary);
+    color: var(--secondray-color);
+    transition: all 1s;
+}
+
+.hero__social {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.hero__social img {
+    width: 16vw;
+}
+
+.hero__social .hero__social__detail {
+    background-color: var(--secondray-color);
+    padding: 10px;
+    border-radius: 10px;
+    gap: 20px;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    box-shadow: 2px 2px 2px 2px rgba(144, 147, 140, 0.52);
+    -webkit-box-shadow: 2px 2px 10px 2px rgba(183, 189, 185, 0.52);
+    -moz-box-shadow: 2px 2px 2px 2px rgba(195, 211, 186, 0.52);
+}
+
+.hero__social .hero__social__detail h1 {
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.hero__social .hero__social__detail h1 sup {
+    /* font-weight: 100; */
+    font-size: 20px;
+}
+
+.hero__social .hero__social__detail p {
+    font-weight: 900;
+}
+
+.bootcamp__title{
+    padding-left: 20px;
+}
+
+.bootcamp__title p {
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #131022;
+    line-height: 31.2px;
+    margin-bottom: 1.25rem;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.bootcamp__title h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #131022;
+    line-height: 62.4px;
+    margin-bottom: 0;
+}
+
+.bootcamp__body{
+    
+    border: 20px solid #13dc4c;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    background-color: #fff;
+}
+
+.bootcamp__img{
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.bootcamp__button button{
+    background: transparent;
+    border: none;
+    color: var(--secondray-color);
+    border: 1px solid var(--secondray-color);
+    padding: 10px;
+    border-radius: 4px;
+    margin: auto;
+    width: 90vw;
+}
+.bootcamp__content h1{
+    font-family: 'Manrope', sans-serif;
+    font-size: 22px;
+}
+
+.our__courses{
+    padding-left: 20px;
+}
+
+.our__courses__content{
+    padding-left: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.our__courses__content__box{
+    width: 340px;
+    border: 2px solid var(--primary);
+    border-radius: 4px;
+}
+.our__courses__content__box img{
+    width: 335px;
+}
